@@ -36,10 +36,10 @@ export function StatsCard() {
 
 
     let max = 0
-    const mean = useMemo(() => data.reduce((acc, datum) => {
+    const mean = data.reduce((acc, datum) => {
         if (datum > max) max = datum
         return acc + datum * (1 / data.length)
-    }, 0), [data])
+    }, 0)
 
     const currentPercentageFromMean = Math.abs(100 * (snap.sliderValue - mean) / mean)
     const relativeWord = snap.sliderValue > mean ? 'higher' : 'lower'

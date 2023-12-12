@@ -42,6 +42,6 @@ export function Slider({ value, min, max, step, onChange }: SliderProps) {
 
     useEffect(() => {
         if (onChange && debouncedEvent) onChange(debouncedEvent)
-    }, [debouncedEvent])
+    }, [debouncedEvent, onChange])
     return <SliderInput defaultValue={value} type="range" min={min} max={max} step={step} onChange={handleChange} />
 }

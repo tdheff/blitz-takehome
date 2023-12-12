@@ -35,7 +35,7 @@ interface BlockProps {
 
 export function Blocks({ min, max, value, numberOfBlocks }: BlocksProps) {
 
-    let blocks = []
+    const blocks = []
     for (let i = 0; i < numberOfBlocks; i++) {
         const filled = (value - min) / (max - min) >= (i + 1) / numberOfBlocks;
         blocks.push(<Block filled={filled} />)
