@@ -1,4 +1,3 @@
-import { useSnapshot } from 'valtio'
 import { styled } from 'goober'
 
 
