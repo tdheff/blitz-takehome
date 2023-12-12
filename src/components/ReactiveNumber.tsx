@@ -14,7 +14,7 @@ export function ReactiveNumber({ value, digits = 1 }: ReactiveNumberProps) {
 
     useEffect(() => {
         if (Math.abs(value - currentValue) > 0.05) {
-            setTimeout(() => setCurrentValue(lerp(currentValue, value, 0.1)), 10)
+            setTimeout(() => setCurrentValue(lerp(currentValue, value, 0.2)), 20)
         }
     }, [value, currentValue]);
 
