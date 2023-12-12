@@ -11,7 +11,7 @@ const Block = styled('div') <BlockProps>`
     height: 1.7em;
     background: ${(props) => props.filled ? props.theme.colors.primary : props.theme.colors.elevated};
     border: 1px solid ${(props) => props.filled ? props.theme.colors.primary : props.theme.colors.border};
-    transition: background 0.5s ease-out, border-color 0.9s ease-out;
+    transition: background 0.5s ease-out, border-color 0.5s ease-out;
 
     &:first-child {
         border-radius: 0.4em 0 0 0.4em;
