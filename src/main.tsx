@@ -12,7 +12,6 @@ setup(React.createElement, undefined, useTheme)
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    {/* <img id="reference-image" src="objective.png" /> */}
     <App />
   </React.StrictMode>,
 )

@@ -2,6 +2,7 @@ import { styled } from 'goober'
 import { Header } from './Typography'
 import { state } from '../state'
 import { ReactiveNumber } from './ReactiveNumber'
+import { useSnapshot } from 'valtio'
 
 interface ProgressCircleProps {
     center: number
@@ -41,15 +42,17 @@ export interface ProgressRingProps {
 }
 
 export function ProgressRing({ width, barWidth, value, unit }: ProgressRingProps) {
+    const snap = useSnapshot(state)
 
     const center = width / 2
     const radius = width / 2 - barWidth
     const arcLength = Math.PI * 2 * radius
     const offset = arcLength * ((100 - value) / 100) * 0.66 + arcLength * 0.34
-    const backgroundOffset = 0.66 + arcLength * 0.31
+    const backgroundOffset = 0.66 + arcLength * 0.30
+
     return (
         <Container height={width * 0.85} width={width} unit={unit}>
-            <Header xl style={{ position: 'absolute', paddingTop: `${radius * 0.2}${unit}` }}><ReactiveNumber digits={0} value={state.sliderValue} />%</Header>
+            <Header xl style={{ position: 'absolute', paddingTop: `${radius * 0.2}${unit}` }}><ReactiveNumber digits={0} value={snap.sliderValue} />%</Header>
             <svg style={{ position: 'absolute', transform: 'rotate(150deg)', top: 0 }} width={`${width}${unit}`} height={`${width}${unit}`}>
                 <ProgressCircle
                     center={center}

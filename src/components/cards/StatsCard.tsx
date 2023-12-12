@@ -32,7 +32,7 @@ const Histogram = styled('div')`
 export function StatsCard() {
     const snap = useSnapshot(state)
 
-    const data = [...useMemo(() => Array.from({ length: 14 }, () => Math.floor(Math.random() * 35)), []), state.sliderValue]
+    const data = [...useMemo(() => Array.from({ length: 14 }, () => Math.floor(Math.random() * 35)), []), snap.sliderValue]
 
 
     let max = 0
@@ -59,7 +59,7 @@ export function StatsCard() {
                 <HistoryHistogram data={data} mean={mean} max={max} />
             </Histogram>
 
-            <Statistic name={'Stat One'} value={100} mean={70} />
+            <Statistic name={'Stat One'} value={snap.sliderValue} mean={40} />
             <Statistic name={'Stat Two'} value={40} mean={70} />
             <Statistic name={'Stat Three'} value={60} mean={70} />
         </CardContents>

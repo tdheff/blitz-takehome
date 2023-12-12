@@ -1,5 +1,4 @@
 import { styled } from 'goober'
-import { useDebounce } from 'use-debounce'
 
 const Container = styled('div')`
     display: flex;
@@ -7,7 +6,7 @@ const Container = styled('div')`
     width: 100%;
     position: relative;
     gap: 0.2em;
-    align-items: baseline;
+    align-items: end;
     margin-top: 0.2em;
 `
 

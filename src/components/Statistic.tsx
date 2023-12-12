@@ -1,5 +1,6 @@
 import { styled } from 'goober'
 import { Subtitle } from './Typography'
+import { ReactiveNumber } from './ReactiveNumber'
 
 const Container = styled('div')`
     width: 100%;
@@ -38,6 +39,7 @@ const OverBar = styled('div') <{ width: number }>`
     background: ${(props) => props.theme.colors.subtle};
     border-radius: 0.2em 0 0 0.2em;
     border-right: 0.15em solid ${(props) => props.theme.colors.primary};
+    transition: width 0.5s ease-out;
 `
 
 const MeanLine = styled('div') <{ position: number }>`
@@ -46,6 +48,7 @@ const MeanLine = styled('div') <{ position: number }>`
     width: 0;
     border-right: 0.15em solid ${(props) => props.theme.colors.secondary};
     left: ${(props) => props.position}%;
+    transition: left 0.5s ease-out;
 `
 
 const White = styled('span')`
@@ -65,7 +68,7 @@ export function Statistic({ name, value, mean }: StatisticProps) {
     return <Container>
         <Label>
             <Subtitle>{name}</Subtitle>
-            <Subtitle><White>{value}</White></Subtitle>
+            <Subtitle><White><ReactiveNumber digits={0} value={value} /></White></Subtitle>
         </Label>
         <Bar>
             <UnderBar />
