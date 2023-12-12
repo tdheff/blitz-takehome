@@ -2,19 +2,19 @@
 
 ## Instructions
 
-1. First install dependencies:
+### Install dependencies:
 
-`npm i`
-
-or
-
-`pnpm i`
-
-
-2. Run the application
-
-`npm run dev`
+```npm i```
 
 or
 
-`pnpm run dev`
+```pnpm i```
+
+
+### Run the application
+
+```npm run dev```
+
+or
+
+```pnpm run dev```
