@@ -2,19 +2,29 @@
 
 ## Instructions
 
-### Install dependencies:
+### 1. Install dependencies:
 
-```npm i```
-
-or
-
-```pnpm i```
-
-
-### Run the application
-
-```npm run dev```
+```bash
+npm i
+```
 
 or
 
-```pnpm run dev```
+```bash
+pnpm i
+```
+
+
+### 2. Run the application
+
+```bash
+npm run dev
+```
+
+or
+
+```bash
+pnpm run dev
+```
+
+### 3. Open link in terminal output
